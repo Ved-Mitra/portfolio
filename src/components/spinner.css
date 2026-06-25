@@ -6,7 +6,7 @@
   animation: spinning82341 1.7s linear infinite;
   text-align: center;
   border-radius: 10px;
-  filter: blur(1px);
+  filter: blur(0.1px);
   box-shadow: 0px -1px 4px 0px rgb(205, 130, 249), 0px 1px 4px 0px rgb(108, 238, 255);
 }
 
@@ -15,7 +15,7 @@
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  filter: blur(2px);
+  filter: blur(5px);
 }
 
 @keyframes spinning82341 {
