@@ -1,21 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  /* Light Body, Dark Navbar Palette */
-  --background: #f8fafc; /* Very light slate for the body */
-  --surface: #0f172a; /* Dark slate for the navbar background */
-  --foreground: #0f172a; /* Dark text for the light body */
-  --navbar-foreground: #f8fafc; /* Light text for the dark navbar */
+  /* Dark Body, Darker Navbar Palette */
+  --background: #050c1bf8; /* Slate 900 for the body */
+  --surface: #020617; /* Slate 950 for the navbar (darker than body) */
+  --foreground: #f1f5f9; /* Light text for both */
   --primary: #00e5ff; /* Cyan accent */
   --accent: #a5b4fc;
-  --border: rgba(0, 0, 0, 0.1);
+  --border: rgba(255, 255, 255, 0.05);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  --color-navbar-foreground: var(--navbar-foreground);
   --color-primary: var(--primary);
   --color-accent: var(--accent);
   --color-border: var(--border);
