@@ -1,10 +1,10 @@
-// src/helpers/tech-data.tsx
 import React from "react";
 import { 
   SiC, 
   SiCplusplus, 
   SiPython, 
   SiJavascript,
+  SiTypescript,
   SiDart,
   SiKotlin,
   SiSolidity,
@@ -18,7 +18,7 @@ import {
   SiFlutter,
   SiAndroid,
   SiOpencv,
-  SiNvidia, // Using NVIDIA for CUDA representation
+  SiNvidia,
   SiNumpy,
   SiPandas,
   SiGit,
@@ -28,7 +28,7 @@ import {
   SiRender,
   SiVercel
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa"; // Java logo from FontAwesome
+import { FaJava } from "react-icons/fa"; 
 
 export interface TechItem {
   name: string;
@@ -40,7 +40,7 @@ export interface TechCategory {
   items: TechItem[];
 }
 
-export function getCategorizedTechStack(): TechCategory[] {
+export function getTechStack(): TechCategory[] {
   return [
     {
       categoryName: "All Skills",
@@ -50,6 +50,7 @@ export function getCategorizedTechStack(): TechCategory[] {
         { name: "Python", icon: <SiPython className="w-5 h-5 text-[#3776AB]" /> },
         { name: "Java", icon: <FaJava className="w-5 h-5 text-[#007396]" /> },
         { name: "JavaScript", icon: <SiJavascript className="w-5 h-5 text-[#F7DF1E]" /> },
+        { name: "TypeScript", icon: <SiTypescript className="w-5 h-5 text-[#347adc]" /> },
         { name: "Dart", icon: <SiDart className="w-5 h-5 text-[#0175C2]" /> },
         { name: "Kotlin", icon: <SiKotlin className="w-5 h-5 text-[#7F52FF]" /> },
         { name: "Solidity", icon: <SiSolidity className="w-5 h-5 text-[#363636]" /> },
