@@ -1,9 +1,12 @@
 import ConnectWithMe from "@/components/ConnectWithMe";
 import DownloadResume from "@/components/DownloadResume";
 import { getTechStack } from "@/helpers/techSkills";
+import ProjectTile from "@/components/ProjectTile";
+import { getFeaturedProjects } from "@/helpers/featuredProjects";
 
 export default function Home() {
     const techStack = getTechStack();
+    const featuredProjects = getFeaturedProjects();
 
     return (
         <div>
@@ -35,7 +38,7 @@ export default function Home() {
                         
                         <div className="flex justify-center mt-2">
                             <img 
-                                src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=2800&pause=900&color=00C2FF&center=true&vCenter=true&width=500&lines=Building+high-performance+systems;Full-stack+%26+Mobile+Development;GPU+Acceleration+%26+Kernel+Dev;Always+learning%2C+always+shipping" 
+                                src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=2800&pause=900&color=00C2FF&center=true&vCenter=true&width=500&lines=Building+systems+projects;Full-stack+%26+Mobile+Development;GPU+Acceleration+%26+Kernel+Dev;Always+learning" 
                                 alt="Typing Animation"
                                 className="max-w-full"
                             />
@@ -74,6 +77,19 @@ export default function Home() {
                             </div>
                         ))}
                 </section>
+            </div>
+
+            <div className="group flex flex-col gap-6 p-8 mt-8 bg-zinc-900 border border-zinc-800 rounded-xl transition-all duration-500 hover:-translate-y-2 hover:border-zinc-700 hover:shadow-lg hover:shadow-emerald-500/10">
+                
+                <span className="text-xl text-zinc-400 group-hover:text-green-400 transition-colors text-left font-semibold">
+                    Featured Projects ---
+                </span>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                    {featuredProjects.map((project, idx) => (
+                        <ProjectTile key={idx} project={project} />
+                    ))}
+                </div>
             </div>
         </div>
     );
